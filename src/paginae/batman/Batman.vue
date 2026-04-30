@@ -1,6 +1,208 @@
+<script lang="ts" setup>
+
+import { House } from 'lucide-vue-next'
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+  
+} from '@/components/ui/navigation-menu'
+
+
+const scrollToSection = (sectionId: string) => {
+    if (sectionId === '#') {
+        window.scrollTo({ top:0, behavior: 'smooth'})
+    }
+
+    const element = document.querySelector<HTMLElement>(sectionId);
+
+        if ( element ) {
+            element.scrollIntoView({ behavior: 'smooth', block:'start' })
+        }
+}
+
+</script>
+
 
 <template>
 
-<h1>Batman page</h1>
+    <div class="batman">
+
+        <nav>
+             <RouterLink to="/">
+                <House class="icon-home"/>
+            </RouterLink>
+
+                <NavigationMenu>
+                    <NavigationMenuList>
+
+                        <NavigationMenuItem>
+                            <a href="#" @click.prevent="scrollToSection('#')">
+                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+                                    Portada
+                                 </NavigationMenuLink>
+                            </a>
+                    
+                        </NavigationMenuItem>
+
+                        <NavigationMenuItem>
+                            <a href="#" @click.prevent="scrollToSection('#vehiculis')">
+                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+                                    Vehículos
+                                 </NavigationMenuLink>
+                            </a>
+                    
+                        </NavigationMenuItem>
+
+                        <NavigationMenuItem>
+                            <a href="#" @click.prevent="scrollToSection('#videre')">
+                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()"> 
+                                    Imágenes
+                                 </NavigationMenuLink>
+                            </a>
+                    
+                        </NavigationMenuItem>
+
+                        <NavigationMenuItem>
+                            <a href="#" @click.prevent="scrollToSection('#contactus')">
+                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+                                    Contacto
+                                 </NavigationMenuLink>
+                            </a>
+                    
+                        </NavigationMenuItem>
+
+                    </NavigationMenuList>
+                </NavigationMenu>
+
+
+        </nav>
+
+            <header class="titulus">
+                <h1>Batman</h1>
+                <div id="titulus-batman" class="titulus-img"></div>
+                <p>Él puede tomar la decisión que nadie más puede, la decisión correcta.</p>
+    
+            </header>
+
+        <section id="vehiculis">
+            <div class="vehiculis-arca">
+                <div class="item unus">
+                    <div class="notitia">
+                    <h2>Avión</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vulputate elit eget fermentum. Ut laoreet ante lacus. Quisque ut tincidunt metus. Curabitur congue, arcu nec tempus sodales, neque sem ultrices mauris, eu tincidunt nibh nibh eu massa. Aenean rhoncus quis nibh ac facilisis.</p>
+                    <small>Fabricado en 2005</small>
+                    </div>
+                    <img src="/imagines/batman/avion.jpg"/>
+                </div>
+
+                 <div class="item duo">
+                    <div class="notitia">
+                        <h2>Moto</h2>
+                        <p>Nulla aliquip cupidatat voluptate veniam nostrud aliquip sit enim officia. Sit eu pariatur officia qui dolor adipisicing cupidatat. Sit consectetur et eu ut esse laboris nulla.</p>
+                        <small>Fabricado en 2006</small>
+                    </div>
+                    <img src="/imagines/batman/moto.jpg"/>
+                </div>
+        
+                <div class="item tribus">
+                    <div class="notitia">
+                        <h2>Coche</h2>
+                        <p>Irure adipisicing est minim eu ad dolor. Eu ea commodo pariatur ut occaecat in cupidatat reprehenderit ut laborum duis. Sunt minim ex fugiat reprehenderit. Lorem consectetur reprehenderit commodo non</p>
+                        <small>Fabricado en 2007</small>
+                    </div>
+                    <img src="/imagines/batman/car.jpg"/>
+                </div>
+            </div>
+
+            <div class="vehiculis-titulus">
+                <h1>Vehículos de Batman</h1>
+            </div>
+        </section>
+
+    </div>    
 
 </template>
+
+<style scoped>
+
+
+  .batman {
+
+    .titulus-img {
+    background-size: 100% 100%;
+    background-position: center center;
+    background-image: url("../imagines/batman/batman.jpg");
+    min-height: 100vh;
+    }
+
+    .titulus-img:hover {
+    background-size: 115% 115%;
+    }
+
+    .titulus > h1 {
+    position: absolute;
+    top: 63%;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem; 
+    color: white;
+    pointer-events:none; 
+    font-family: batman;
+    }
+
+    .titulus > p {
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    pointer-events:none;
+    font-family: batman;
+    }
+  }
+
+    .icon-home {
+        color: slateblue;
+        width: 3rem;
+        height: 3rem;
+    }
+
+
+    .icon-home:hover {
+        color: white;
+        background-color: slateblue;
+    }
+
+     .extra-nav {
+        background-color: white;
+        opacity: 0.7;
+        box-shadow: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        width: 11rem;
+        border-radius: 0 0 1rem 0;
+        z-index: 1;
+     }
+
+    @media (min-width: 640px){
+    .extra-nav {
+        width: 100%;
+        border-radius: 0;
+        opacity: 1;
+        left: 0;
+    }
+    }
+
+
+    @media (min-width:768px) {
+        .titulus > p {
+            display: block;
+        }
+    }
+
+
+</style>

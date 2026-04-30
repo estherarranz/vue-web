@@ -1,34 +1,70 @@
 <script lang="ts" setup>
-import Button from '@/components/ui/button/Button.vue';
+import { Button }  from '@/components/ui/button'
 
 
 </script>
 
 <template>
 
-<div class="cappa">
-  <h1>Home page</h1>
-  <Button variant="destructive">Cick me</Button>
-  <Button class="viridis" size="lg" variant="tertiarius">Cick me</Button>
-</div>
+  <div class="fondo-home">
+
+
+      <h1>
+
+        <span>Diseño</span> Web y <br>
+        Apps <span>Interactivas</span>
+      </h1>
+    
+
+
+      <div class="botones">
+
+        <Button>
+          <RouterLink to="/indecision"> Sí o No</RouterLink>
+
+        </Button>
+
+        <Button>
+          <RouterLink to="/batman"> Batman</RouterLink>
+
+        </Button>
+
+
+        <Button>
+          <RouterLink to="/simpsons"> Simpsons</RouterLink>
+
+        </Button>
+
+        <Button>
+          <RouterLink to="https://www.upv.es">UPV</RouterLink>
+
+        </Button>
+
+
+
+      </div>
+
+  </div>
 
 </template>
 
 <style scoped>
-.cappa {
-  margin: 20px;
-}
+  .fondo-home {
+    background-color: rgb(21, 25, 52);
+    height: 100vh;
+    color: rgb(24, 182, 246);
+  }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 12px;
-}
 
-Button {
-  margin-right: 12px;
-}
+  .botones > Button {
+    margin-right: 0.5rem;
+    background-color: rgb(24, 182, 246);
+  } 
 
-.viridis {
-  padding: 0 100px;
-}
+
+  .botones > Button:hover {
+    background-color: rgba(24, 182, 246, 0.7);
+  } 
+
+
 </style>
