@@ -87,40 +87,40 @@ const scrollToSection = (sectionId: string) => {
     
             </header>
 
-        <section id="vehiculis">
-            <div class="vehiculis-arca">
-                <div class="item unus">
-                    <div class="notitia">
-                    <h2>Avión</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vulputate elit eget fermentum. Ut laoreet ante lacus. Quisque ut tincidunt metus. Curabitur congue, arcu nec tempus sodales, neque sem ultrices mauris, eu tincidunt nibh nibh eu massa. Aenean rhoncus quis nibh ac facilisis.</p>
-                    <small>Fabricado en 2005</small>
+            <section id="vehiculis">
+                <div class="vehiculis-arca">
+                    <div class="item unus">
+                        <div class="notitia">
+                        <h2>Avión</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vulputate elit eget fermentum. Ut laoreet ante lacus. Quisque ut tincidunt metus. Curabitur congue, arcu nec tempus sodales, neque sem ultrices mauris, eu tincidunt nibh nibh eu massa. Aenean rhoncus quis nibh ac facilisis.</p>
+                        <small>Fabricado en 2005</small>
+                        </div>
+                        <img src="/imagines/batman/avion.jpg"/>
                     </div>
-                    <img src="/imagines/batman/avion.jpg"/>
+
+                    <div class="item duo">
+                        <div class="notitia">
+                            <h2>Moto</h2>
+                            <p>Nulla aliquip cupidatat voluptate veniam nostrud aliquip sit enim officia. Sit eu pariatur officia qui dolor adipisicing cupidatat. Sit consectetur et eu ut esse laboris nulla.</p>
+                            <small>Fabricado en 2006</small>
+                        </div>
+                        <img src="/imagines/batman/moto.jpg"/>
+                    </div>
+            
+                    <div class="item tribus">
+                        <div class="notitia">
+                            <h2>Coche</h2>
+                            <p>Irure adipisicing est minim eu ad dolor. Eu ea commodo pariatur ut occaecat in cupidatat reprehenderit ut laborum duis. Sunt minim ex fugiat reprehenderit. Lorem consectetur reprehenderit commodo non</p>
+                            <small>Fabricado en 2007</small>
+                        </div>
+                        <img src="/imagines/batman/car.jpg"/>
+                    </div>
                 </div>
 
-                 <div class="item duo">
-                    <div class="notitia">
-                        <h2>Moto</h2>
-                        <p>Nulla aliquip cupidatat voluptate veniam nostrud aliquip sit enim officia. Sit eu pariatur officia qui dolor adipisicing cupidatat. Sit consectetur et eu ut esse laboris nulla.</p>
-                        <small>Fabricado en 2006</small>
-                    </div>
-                    <img src="/imagines/batman/moto.jpg"/>
+                <div class="vehiculis-titulus">
+                    <h1>Vehículos de Batman</h1>
                 </div>
-        
-                <div class="item tribus">
-                    <div class="notitia">
-                        <h2>Coche</h2>
-                        <p>Irure adipisicing est minim eu ad dolor. Eu ea commodo pariatur ut occaecat in cupidatat reprehenderit ut laborum duis. Sunt minim ex fugiat reprehenderit. Lorem consectetur reprehenderit commodo non</p>
-                        <small>Fabricado en 2007</small>
-                    </div>
-                    <img src="/imagines/batman/car.jpg"/>
-                </div>
-            </div>
-
-            <div class="vehiculis-titulus">
-                <h1>Vehículos de Batman</h1>
-            </div>
-        </section>
+            </section>
 
     </div>    
 
@@ -203,6 +203,121 @@ const scrollToSection = (sectionId: string) => {
             display: block;
         }
     }
+
+
+
+    #vehiculis {
+  max-width: 510px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vehiculis-arca {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehiculis-titulus {
+  height: 5.5rem; /* 88px */
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  padding: 1.5rem 0;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+
+.item > img {
+    width: 450px;
+
+}
+
+.unus {
+  background-color: rgba(220, 220, 220, 0.2) ; 
+}
+
+.duo {
+  background-color: rgba(220, 220, 220, 0.8);
+}
+
+.tribus {
+  background-color: rgba(220, 220, 220, 0.8);
+}
+
+.notitia {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+.notitia > small {
+  font-weight: bold;
+  padding: 1rem;
+}
+ 
+.notitia > h2 {
+ font-size: 1.7rem; 
+ font-weight: 600;
+ color: rgba(0, 0, 0, 0.7);
+ padding-bottom: 1rem;
+} 
+
+@media (min-width: 640px) {
+    #vehiculis {
+        max-width: 576px;
+    }
+}
+
+@media (min-width: 768px) {
+    #vehiculis {
+        max-width: 900px;
+    }
+
+    .item {
+        flex-direction: row;
+        height: 320px;
+    }
+
+    .notitia {
+        width: 40%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+     #vehiculis {
+        max-width: 1280px;
+    }
+
+    .item {
+        flex-direction: column;
+        height: 560px;
+    }
+
+    .vehiculis-arca {
+        flex-direction: row;
+    }
+
+    .notitia {
+        width: 90%;
+    }
+
+}
 
 
 </style>
