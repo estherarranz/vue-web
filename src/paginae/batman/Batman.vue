@@ -10,6 +10,15 @@ import {
   
 } from '@/components/ui/navigation-menu'
 
+import { Card, CardContent } from '@/components/ui/card'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+
 
 const scrollToSection = (sectionId: string) => {
     if (sectionId === '#') {
@@ -23,6 +32,8 @@ const scrollToSection = (sectionId: string) => {
         }
 }
 
+    const photos = ["justice", "arkham", "superman", "varios", "villana", "villano", "grupo", "robin", "anne", "joker", "resplandor", "cat", "gafas", "league", "fondoVerde"]; 
+
 </script>
 
 
@@ -30,17 +41,17 @@ const scrollToSection = (sectionId: string) => {
 
     <div class="batman">
 
-        <nav>
+        <nav class="extra-nav flex flex-col sm:flex-row justify-between px-3">
              <RouterLink to="/">
                 <House class="icon-home"/>
             </RouterLink>
 
                 <NavigationMenu>
-                    <NavigationMenuList>
+                    <NavigationMenuList class="flex flex-col sm:flex-row">
 
                         <NavigationMenuItem>
                             <a href="#" @click.prevent="scrollToSection('#')">
-                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+                                 <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-md hover:bg-[#6A5ACD] hover:text-white transition-all']">
                                     Portada
                                  </NavigationMenuLink>
                             </a>
@@ -49,7 +60,7 @@ const scrollToSection = (sectionId: string) => {
 
                         <NavigationMenuItem>
                             <a href="#" @click.prevent="scrollToSection('#vehiculis')">
-                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+                                 <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-md hover:bg-[#6A5ACD] hover:text-white transition-all']">
                                     Vehículos
                                  </NavigationMenuLink>
                             </a>
@@ -58,7 +69,7 @@ const scrollToSection = (sectionId: string) => {
 
                         <NavigationMenuItem>
                             <a href="#" @click.prevent="scrollToSection('#videre')">
-                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()"> 
+                                 <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-md hover:bg-[#6A5ACD] hover:text-white transition-all']"> 
                                     Imágenes
                                  </NavigationMenuLink>
                             </a>
@@ -67,7 +78,7 @@ const scrollToSection = (sectionId: string) => {
 
                         <NavigationMenuItem>
                             <a href="#" @click.prevent="scrollToSection('#contactus')">
-                                 <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+                                 <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-md hover:bg-[#6A5ACD] hover:text-white transition-all']">
                                     Contacto
                                  </NavigationMenuLink>
                             </a>
@@ -120,6 +131,38 @@ const scrollToSection = (sectionId: string) => {
                 <div class="vehiculis-titulus">
                     <h1>Vehículos de Batman</h1>
                 </div>
+            </section>
+
+            <section id="videre" class="w-full flex justify-center min-h[60vh] lg:min-h[95vh]">
+                <Carousel class="w-full max-w-md md:max-w-2xl lg:max-w-4xl"
+                :opts="{
+                    loop:true,
+                    dragFree:true
+                }"
+                >
+                    <CarouselContent>
+                        <CarouselItem v-for="i in photos.length" :key="i">
+                            <div class="p-1">
+                            <Card>
+                                <CardContent class="flex aspect-6/4 items-center justify-center p-6">
+                                  <img :src="`/imagines/batman/${photos[i - 1]}.jpg`" 
+                                  :alt="`Image $ { i } de Batman`"
+                                  class="w-full h-full object-cover"
+                                  >
+
+
+
+                                </CardContent>
+                            </Card>
+                            </div>
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
+
+
+                
             </section>
 
     </div>    
