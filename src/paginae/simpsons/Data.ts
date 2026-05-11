@@ -8,7 +8,6 @@ export interface Character {
 
 } 
 
-
 export const characters: Character[] = [
     {
         id: 0,
