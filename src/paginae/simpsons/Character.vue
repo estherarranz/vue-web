@@ -2,7 +2,7 @@
 import { useRoute, useRouter } from 'vue-router';
 import { characters, type Character } from './Data';
 import { ref} from 'vue';
-import { CheckIcon, ChevronsUpDownIcon } from 'lucide-vue-next'
+
 
 
 const route = useRoute()
