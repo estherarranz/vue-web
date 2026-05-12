@@ -77,7 +77,7 @@ onUnmounted(() => {
                             @click.prevent="item.onClick ? item.onClick () : null">
                                  
                             <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-md hover:bg-[#6A5ACD] hover:text-white transition-all']">
-                                    ¨{{ item.label }}
+                                    {{ item.label }}
                                  </NavigationMenuLink>
                             </a>
                     

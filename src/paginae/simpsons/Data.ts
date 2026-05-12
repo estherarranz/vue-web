@@ -62,7 +62,7 @@ export const characters: Character[] = [
     nomen: "Lisa Simpson",
     imago: "lisa.png",
     quote: "Cállate, cerebro. Ahora estoy con amigos y ya no te necesito",
-    descriptione: "Tiene 8 años y el cabello verde. Es inteligente, sensible y a menudo muestra un gran sentido de la ética y la moral. Además también es una melómana y muestra una gran apreciación por la cultura contemporánea."
+    descriptione: "Tiene 8 años y el cabello amarillo. Es inteligente, sensible y a menudo muestra un gran sentido de la ética y la moral. Además también es una melómana y muestra una gran apreciación por la cultura contemporánea."
   },
   
   { 

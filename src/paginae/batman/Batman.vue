@@ -343,7 +343,7 @@ const menuItems = [
   .batman {
 
     .titulus-img {
-    background-size: 100% 100%;
+    background-size: 80% 80%;
     aspect-ratio: 8/7;
     background-position: center center;
     background-image: url("../imagines/batman/batman.jpg");
@@ -351,7 +351,7 @@ const menuItems = [
     }
 
     .titulus-img:hover {
-    background-size: 115% 115%;
+    background-size: 110% 110%;
     }
 
     .titulus > h1 {
@@ -394,8 +394,11 @@ const menuItems = [
 
 .vehiculis-arca {
     order: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap:0;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #000;
 }
 
 .vehiculis-titulus {
@@ -409,27 +412,24 @@ const menuItems = [
 }
 
 .item {
-  padding: 1.5rem 0;
-  height: 540px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-
+    display: flex;
+    flex-direction: column; /* Apila texto e imagen verticalmente */
+    border-right: 1px solid #000;
 }
 
 .item > img {
-    width: 450px;
+    width: 100%;
+    height: 350px; /* Define una altura fija para que coincidan */
+    object-fit: cover; 
 
 }
 
 .unus {
-  background-color: rgba(220, 220, 220, 0.2) ; 
+    background-color: rgba(220, 220, 220, 0.8); 
 }
 
 .duo {
-  background-color: rgba(220, 220, 220, 0.8);
+   background-color: rgba(220, 220, 220, 0.2);
 }
 
 .tribus {
