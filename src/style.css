@@ -1,16 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 body {
-  font-family: "Lexend", sans-serif;
+ font-family: 'MedievalSharp', serif;
 }
 
-@font-face {
-  font-family: batman;
-  src: url("../fonts/batmfo__.ttf");
+h1, h2, h3 {
+  font-family: 'MedievalSharp', serif;
 }
-
-@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -123,8 +123,10 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'MedievalSharp', serif !important;
   }
 }
 

@@ -48,19 +48,7 @@ const { mousePositione, cumMouseMove, } = useMouseMotio();
 </template>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
-
-h2 {
-  
-  font-family: 'MedievalSharp', serif;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-  
-  line-height: 1.1;
-}
-button {
-  font-family: 'MedievalSharp', serif !important;
-
-}
+   
 
 
 </style>

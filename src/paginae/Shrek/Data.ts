@@ -41,7 +41,31 @@ export const characters: Character[] = [
     {
         id: 4,
         nomen: "Lord Farquaad",
-        imago: "lord_farquad.jpg",
+        imago: "lord farquad.png",
+        quote: "Eres un ogro... y yo soy una princesa. Esto no puede ser.",
+        descriptione: "Una princesa fuerte e independiente que rompe con los estereotipos clásicos. Oculta una maldición que la transforma en ogro cada noche al ponerse el sol."
+    },
+
+     {
+        id: 5,
+        nomen: "Jengi",
+        imago: "jengi.png",
+        quote: "Eres un ogro... y yo soy una princesa. Esto no puede ser.",
+        descriptione: "Una princesa fuerte e independiente que rompe con los estereotipos clásicos. Oculta una maldición que la transforma en ogro cada noche al ponerse el sol."
+    },
+
+    {
+        id: 6,
+        nomen: "Pinocho",
+        imago: "pinocho.png",
+        quote: "Eres un ogro... y yo soy una princesa. Esto no puede ser.",
+        descriptione: "Una princesa fuerte e independiente que rompe con los estereotipos clásicos. Oculta una maldición que la transforma en ogro cada noche al ponerse el sol."
+    },
+
+     {
+        id: 7,
+        nomen: "Gato con Botas",
+        imago: "gatoconbotas.png",
         quote: "Eres un ogro... y yo soy una princesa. Esto no puede ser.",
         descriptione: "Una princesa fuerte e independiente que rompe con los estereotipos clásicos. Oculta una maldición que la transforma en ogro cada noche al ponerse el sol."
     },
