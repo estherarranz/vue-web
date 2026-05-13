@@ -29,17 +29,18 @@ const { mousePositione, cumMouseMove, } = useMouseMotio();
     
     <div class="z-10 flex flex-col items-center gap-4 mb-10"> 
       
-      <Button  class="bg-[#78b13f] hover:bg-[#5a862f] text-white font-bold font-medieval py-6 w-56 text-lg">
+      <Button as-child class="bg-[#78b13f] hover:bg-[#5a862f] text-white font-bold font-medieval py-6 w-56 text-lg">
         <RouterLink to="/shrek/peliculas">Películas</RouterLink>
       </Button>
 
-      <Button class="bg-[#78b13f] hover:bg-[#5a862f] text-white font-bold font-medieval py-6 w-56 text-lg">
+      <Button as-child class="bg-[#78b13f] hover:bg-[#5a862f] text-white font-bold font-medieval py-6 w-56 text-lg">
         <RouterLink to="/shrek/personajes">Personajes</RouterLink>
       </Button>
 
-       <Button  class="bg-[#78b13f] hover:bg-[#5a862f] text-white font-bold font-medieval py-6 w-56 text-lg">
+      <Button as-child class="bg-[#78b13f] hover:bg-[#5a862f] text-white font-bold font-medieval py-6 w-56 text-lg">
         <RouterLink to="/">Menú</RouterLink>
       </Button>
+
 
     </div>
 
