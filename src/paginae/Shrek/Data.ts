@@ -17,7 +17,7 @@ export const characters: Character[] = [
     },
     {
         id: 1,
-        nomen: "Asno (Burro)",
+        nomen: "Asno",
         imago: "asno.png",
         quote: "¡Y mañana por la mañana, yo hago los bofles!",
         descriptione: "Un burro parlanchín, hiperactivo y extremadamente optimista. Se convierte en el mejor amigo inseparable de Shrek, a quien desespera constantemente con su parloteo."

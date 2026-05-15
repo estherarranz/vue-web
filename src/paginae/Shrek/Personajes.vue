@@ -45,13 +45,13 @@ const paginaNumeri = computed(() => {
     Clica para conocer las capas
 </p>
 
-<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-center mx-auto">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 justify-center mx-auto">
    
     
     <Card 
         v-for="character in listaShrek" 
         :key="character.id"
-        class="group cursor-pointer w-[200px] h-[248px] border-stone-800 bg-stone-900/90 text-white hover:bg-[#78b13f] transition-all duration-300 hover:-translate-y-1 shadow-xl"
+        class="group cursor-pointer w-[200px] h-[300px] border-stone-800 bg-stone-900/90 text-white hover:bg-[#78b13f] transition-all duration-300 hover:-translate-y-1 shadow-xl"
     >
         <CardContent 
             class="flex flex-col items-center gap-1 w-full px-0 h-full justify-between pb-3"
