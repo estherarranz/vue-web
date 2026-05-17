@@ -14,18 +14,18 @@ const isOpen = ref(false)
   <div
     class="relative h-screen w-screen overflow-hidden"
     @mousemove="cumMouseMove"
-  >
+    >
     
     <img
       class="absolute inset-0 w-full h-full object-cover"
       src="/imagines/shrek/shrekinicio.png"
     />
     
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/10 to-transparent transition-opacity duration-300"
-      :class="{ 'from-black/80 bg-black/40 backdrop-blur-sm z-10': isOpen }"
-      @click="isOpen = false"
-    />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/10 to-transparent transition-opacity duration-300"
+        :class="{ 'from-black/80 bg-black/40 backdrop-blur-sm z-10': isOpen }"
+        @click="isOpen = false"
+  />
 
     <nav class="absolute top-0 left-0 w-full h-20 flex items-center justify-end px-8 z-50 bg-transparent">
       <button 

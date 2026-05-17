@@ -45,11 +45,14 @@ const paginaNumeri = computed(() => {
                     :key="character.id"
                     class="group cursor-pointer w-[240px] h-[330px] bg-transparent border border-transparent shadow-none overflow-hidden transition-all duration-500 rounded-3xl"
                     :class="[
-                      index % 3 === 0 ? 'hover:bg-black/40 hover:backdrop-blur-md hover:border-[#9ed763]/60 hover:ring-2 hover:ring-[#78b13f]/30 hover:shadow-[0_0_35px_rgba(120,177,63,0.45)]' : '',
-                      index % 3 === 1 ? 'hover:bg-black/40 hover:backdrop-blur-md hover:border-[#7eb5d6]/60 hover:ring-2 hover:ring-[#7eb5d6]/30 hover:shadow-[0_0_35px_rgba(126,181,214,0.45)]' : '',
-                      index % 3 === 2 ? 'hover:bg-black/40 hover:backdrop-blur-md hover:border-[#e5b842]/60 hover:ring-2 hover:ring-[#e5b842]/30 hover:shadow-[0_0_35px_rgba(229,184,66,0.45)]' : ''
+                    [
+                        'hover:bg-black/40 hover:backdrop-blur-md hover:border-[#9ed763]/60 hover:ring-2 hover:ring-[#78b13f]/30 hover:shadow-[0_0_35px_rgba(120,177,63,0.45)]',
+                        'hover:bg-black/40 hover:backdrop-blur-md hover:border-[#7eb5d6]/60 hover:ring-2 hover:ring-[#7eb5d6]/30 hover:shadow-[0_0_35px_rgba(126,181,214,0.45)]',
+                        'hover:bg-black/40 hover:backdrop-blur-md hover:border-[#e5b842]/60 hover:ring-2 hover:ring-[#e5b842]/30 hover:shadow-[0_0_35px_rgba(229,184,66,0.45)]'
+                    ][index % 3]
                     ]"
-                >
+                    >
+
                     <CardContent 
                         class="flex flex-col items-center gap-2 w-full px-4 h-full justify-between pt-4 pb-4"
                         @click="router.push(`/shrek/gallery/${character.id}`)"
