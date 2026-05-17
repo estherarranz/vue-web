@@ -69,17 +69,6 @@ const isOpen = ref(false)
         </RouterLink>
       </Button>
 
-      <Button
-          as-child
-          class="bg-[#78b13f]/90 text-[#cd5c5c] hover:bg-[#cd5c5c] hover:text-[#78b13f]
-                font-bold font-medieval py-4 text-base rounded-xl 
-                border border-[#cd5c5c] transition-colors duration-200"
-          @click="isOpen = false"
-        >
-        <RouterLink to="/">
-          Menú
-        </RouterLink>
-      </Button>
     </aside>
 
     <div

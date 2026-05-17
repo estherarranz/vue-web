@@ -37,11 +37,6 @@ const paginaNumeri = computed(() => {
             <h1 class="font-bold text-4xl lg:text-6xl mt-2 mb-4 bg-gradient-to-r from-[#9ed763] to-[#78b13f] bg-clip-text text-transparent font-medieval tracking-wide drop-shadow-[0_4px_12px_rgba(120,177,63,0.3)]">
                 Descubre los personajes de la saga de Shrek
             </h1>
-
-            <p class="mb-10 text-[#d4ccb6] font-medium tracking-wide text-base lg:text-lg opacity-95">
-                Clica para conocer las capas
-            </p>
-
           
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 justify-center mx-auto max-w-[1000px]">
                
@@ -69,15 +64,14 @@ const paginaNumeri = computed(() => {
                         </div>
                         
                       
-                        <h2 class="font-bold text-lg md:text-xl px-2 line-clamp-1 text-white font-medieval transition-colors duration-300"
+                       <h2 class="font-bold text-lg md:text-xl px-2 line-clamp-1 text-white font-medieval transition-colors duration-300"
                             :class="[
-                              index % 3 === 0 ? 'group-hover:text-[#9ed763]' : '',
-                              index % 3 === 1 ? 'group-hover:text-[#7eb5d6]' : '',
-                              index % 3 === 2 ? 'group-hover:text-[#e5b842]' : ''
+                            ['group-hover:text-[#9ed763]', 'group-hover:text-[#7eb5d6]', 'group-hover:text-[#e5b842]'][index % 3]
                             ]"
-                        >
+                            >
                             {{ character.nomen }}
                         </h2>
+
                     </CardContent>
                 </Card>
             </div>
